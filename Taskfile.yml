@@ -1,0 +1,8 @@
+version: "3"
+
+tasks:
+    build:
+        desc: Build the app
+        cmds:
+        - GOFLAGS=-mod=mod GOOS=windows GOARCH=amd64 go build -o bin/sorter.exe
+        - GOFLAGS=-mod=mod GOOS=darwin GOARCH=amd64 go build -o bin/sorter.app
